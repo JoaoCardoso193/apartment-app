@@ -1,0 +1,19 @@
+<h1>Tenant Info</h1>
+
+<label>Name: </label>
+<h2><%= @tenant.name%></h2>
+
+<label>Residing at:</label>
+<h2><%= @tenant.apartment.address%></h2>
+
+<a href="/tenants/<%= @tenant.id%>/edit">Edit tenant info </a><br>
+
+<form action="/tenants/<%= @tenant.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+
+<input type="submit" value="Delete tenant"/>
+</form>
+
+<br>
+
+<a href="/tenants">Back to all tenants</a>

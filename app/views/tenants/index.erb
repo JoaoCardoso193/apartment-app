@@ -1,0 +1,12 @@
+<p> List of tenants: </p>
+<ul>
+<% @tenants.each do |tenant| %>
+    <a href="/tenants/<%= tenant.id %>">
+        <li> <%= tenant.name %> </li>
+   </a>
+<% end %>
+</ul>
+
+<a class="button" href= "tenants/new"> New Tenant</a>
+<br>
+<a class="button" href="/apartments">All apartments</a>
